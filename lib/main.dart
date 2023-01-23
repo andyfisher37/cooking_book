@@ -1,7 +1,7 @@
-import 'package:cooking_book/category_item_screen.dart';
+import 'package:cooking_book/screens/category_item_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'categories_screen.dart';
+import 'screens/categories_screen.dart';
 
 void main() {
   runApp(const MyApp());
