@@ -11,7 +11,7 @@ class MealDetailScreen extends StatelessWidget {
       alignment: Alignment.topCenter,
       child: Text(
         text,
-        style: TextStyle(
+        style: const TextStyle(
           fontWeight: FontWeight.bold,
         ),
       ),
@@ -40,12 +40,12 @@ class MealDetailScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('${selectedMeal.title}'),
+        title: Text(selectedMeal.title),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
+            SizedBox(
               height: 300,
               width: double.infinity,
               child: Image.network(
@@ -76,7 +76,8 @@ class MealDetailScreen extends StatelessWidget {
                     children: [
                       ListTile(
                         leading: CircleAvatar(
-                          backgroundColor: Color.fromARGB(255, 37, 87, 129),
+                          backgroundColor:
+                              const Color.fromARGB(255, 37, 87, 129),
                           child: Text(
                             '${index + 1}',
                             style: const TextStyle(fontWeight: FontWeight.bold),
@@ -90,6 +91,13 @@ class MealDetailScreen extends StatelessWidget {
                 ))
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.of(context).pop(mealId);
+        },
+        backgroundColor: Theme.of(context).primaryColor,
+        child: Icon(Icons.arrow_back_ios_new),
       ),
     );
   }

@@ -23,6 +23,18 @@ class CategoryItem extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
+            boxShadow: const <BoxShadow>[
+              BoxShadow(
+                color: Color.fromARGB(204, 122, 122, 122),
+                offset: Offset(0, 2),
+                blurRadius: 4,
+              ),
+              BoxShadow(
+                color: Color.fromARGB(128, 61, 61, 61),
+                offset: Offset(0, 6),
+                blurRadius: 20,
+              ),
+            ],
             gradient: LinearGradient(
                 colors: [color.withOpacity(0.7), color],
                 begin: Alignment.bottomCenter,

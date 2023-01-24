@@ -34,9 +34,9 @@ class MainDrawer extends StatelessWidget {
           ),
           const Divider(),
           buildListTile('Meals', Icons.restaurant,
-              () => Navigator.of(context).pushNamed('/')),
+              () => Navigator.of(context).pushReplacementNamed('/')),
           buildListTile('Filters', Icons.filter,
-              () => Navigator.of(context).pushNamed('/filters')),
+              () => Navigator.of(context).pushReplacementNamed('/filters')),
         ],
       ),
     );
