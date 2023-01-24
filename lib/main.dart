@@ -1,3 +1,4 @@
+import 'package:cooking_book/screens/filters_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/categories_screen.dart';
@@ -18,15 +19,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Coocking Book!',
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
-        accentColor: Colors.blueGrey,
-        canvasColor: Color.fromRGBO(255, 254, 229, 1),
+        canvasColor: const Color.fromRGBO(255, 254, 229, 1),
         fontFamily: 'Raleway',
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.indigo)
+            .copyWith(secondary: Colors.blueGrey),
       ),
       routes: {
-        '/': (context) => TabsScreen(),
+        '/': (context) => const TabsScreen(),
         CategoryItemScreen.routeName: (ctx) => CategoryItemScreen(),
         MealDetailScreen.routeName: (ctx) => MealDetailScreen(),
+        FiltersScreen.routeName: (ctx) => FiltersScreen(),
       },
       onGenerateRoute: (settings) =>
           MaterialPageRoute(builder: (ctx) => const CategoriesScreen()),
