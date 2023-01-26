@@ -1,6 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 class MainDrawer extends StatelessWidget {
+  const MainDrawer({super.key});
+
   Widget buildListTile(String title, IconData icon, Function tapHandler) {
     return ListTile(
       leading: Icon(
@@ -37,6 +41,7 @@ class MainDrawer extends StatelessWidget {
               () => Navigator.of(context).pushReplacementNamed('/')),
           buildListTile('Filters', Icons.filter,
               () => Navigator.of(context).pushReplacementNamed('/filters')),
+          buildListTile('Exit', Icons.exit_to_app, () => exit(0)),
         ],
       ),
     );

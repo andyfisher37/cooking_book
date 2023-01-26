@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:cooking_book/widgets/main_drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +6,7 @@ class FiltersScreen extends StatefulWidget {
   final Function saveFilters;
   final Map<String, bool> currentFilters;
 
-  FiltersScreen(this.currentFilters, this.saveFilters);
+  const FiltersScreen(this.currentFilters, this.saveFilters, {super.key});
 
   @override
   State<FiltersScreen> createState() => _FiltersScreenState();
@@ -59,10 +57,10 @@ class _FiltersScreenState extends State<FiltersScreen> {
                 };
                 widget.saveFilters(selectedFilters);
               },
-              icon: Icon(Icons.save))
+              icon: const Icon(Icons.save))
         ],
       ),
-      drawer: MainDrawer(),
+      drawer: const MainDrawer(),
       body: Column(
         children: [
           Container(
