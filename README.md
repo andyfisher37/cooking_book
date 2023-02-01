@@ -1,6 +1,6 @@
 # cooking_book
 
-A new Flutter project.
+Demo Flutter project for simple cooking book
 
 ## Getting Started
 
